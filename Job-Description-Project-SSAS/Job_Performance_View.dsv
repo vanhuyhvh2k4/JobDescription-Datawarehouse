@@ -1,0 +1,146 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1b09c7da-8940-442c-aceb-cdc64d87af01" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Job_Performance_View</ID>
+  <Name>Job_Performance_View</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Job- Description- Datawarehouse</DataSourceID>
+  <Schema>
+    <xs:schema id="Job_Performance_View" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Job_Performance_View" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="ce1e389a-5789-4556-955f-70b92459b8ac">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Fact_Company_Performance" msprop:DbTableName="Fact_Company_Performance" msprop:FriendlyName="Fact_Company_Performance" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="f311b316-c214-41ba-9a62-03bf85134dc9">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="UniqueID" msprop:FriendlyName="UniqueID" msprop:DbColumnName="UniqueID" msprop:design-time-name="b07b4b99-a122-4ab7-8c9d-5d66c04cfb3c" type="xs:int" />
+                  <xs:element name="Company_ID" msprop:FriendlyName="Company_ID" msprop:DbColumnName="Company_ID" msprop:design-time-name="e6b622fc-8728-4862-81de-d55a04cbae8c" type="xs:int" minOccurs="0" />
+                  <xs:element name="Job_Count" msprop:FriendlyName="Job_Count" msprop:DbColumnName="Job_Count" msprop:design-time-name="407df966-90dd-473f-b23a-dd60b4256a01" type="xs:int" minOccurs="0" />
+                  <xs:element name="Avg_Salary" msprop:FriendlyName="Avg_Salary" msprop:DbColumnName="Avg_Salary" msprop:design-time-name="2e621814-3c4f-4d20-bbc4-685e8592d224" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Company" msprop:DbTableName="Dim_Company" msprop:FriendlyName="Dim_Company" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="ae6867d8-f4d3-48ab-9ee6-0afc9c988db6">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Company_ID" msprop:FriendlyName="Company_ID" msprop:DbColumnName="Company_ID" msprop:design-time-name="02df958f-f633-4032-bb74-41ea85159395" type="xs:int" />
+                  <xs:element name="Company" msprop:FriendlyName="Company" msprop:DbColumnName="Company" msprop:design-time-name="6d6950d8-8678-47d7-84c7-459159f558a3" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Sector" msprop:FriendlyName="Sector" msprop:DbColumnName="Sector" msprop:design-time-name="d5b1f7d7-f706-4d29-9b00-c840ad1699ea" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Industry" msprop:FriendlyName="Industry" msprop:DbColumnName="Industry" msprop:design-time-name="b3658156-fb5a-4975-94ea-992e6030004d" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="City" msprop:FriendlyName="City" msprop:DbColumnName="City" msprop:design-time-name="d9ab39fe-eb30-4c11-8d4c-c80f770366c7" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="State" msprop:FriendlyName="State" msprop:DbColumnName="State" msprop:design-time-name="9b189ddc-64da-4e63-8f49-5777efb2dcef" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Zip" msprop:FriendlyName="Zip" msprop:DbColumnName="Zip" msprop:design-time-name="6336c90d-b2ce-405f-8b3a-18bb172fc2d0" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Website" msprop:FriendlyName="Website" msprop:DbColumnName="Website" msprop:design-time-name="f7316a52-5cfd-44c6-b70b-adb1fd553e33" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Ticker" msprop:FriendlyName="Ticker" msprop:DbColumnName="Ticker" msprop:design-time-name="2735bbfd-fe75-47b7-ae74-ddedec65824a" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CEO" msprop:FriendlyName="CEO" msprop:DbColumnName="CEO" msprop:design-time-name="e09856a9-dce4-42c7-abfe-fcadf1f95f66" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Company_Performance" />
+          <xs:field xpath="UniqueID" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Company_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Company" />
+          <xs:field xpath="Company_ID" />
+        </xs:unique>
+        <xs:keyref name="FK__Fact_Comp__Compa__534D60F1" refer="dbo_Dim_Company_Constraint1">
+          <xs:selector xpath=".//dbo_Fact_Company_Performance" />
+          <xs:field xpath="Company_ID" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Job_Performance_View xmlns="" />
+  </Schema>
+</DataSourceView>

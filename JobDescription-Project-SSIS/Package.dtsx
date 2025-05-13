@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="96"
-  DTS:VersionGUID="{D607C344-5A1D-4C9D-BF16-2CDA0BDF3CB8}">
+  DTS:VersionBuild="105"
+  DTS:VersionGUID="{934269FE-C240-44D1-9880-C5D58E522FE7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,11 +25,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-TPGUJN3\SQLEXPRESS;User ID=vanhuy;Initial Catalog=JobDescription-Source;Provider=SQLOLEDB.1;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=DESKTOP-TPGUJN3;User ID=vanhuy;Initial Catalog=Job-Description-Datawarehouse;Provider=SQLOLEDB.1;Auto Translate=False;Application Name=SSIS-Package-{896D9A69-E4FB-449E-96C0-DF7E297781F9}DESKTOP-TPGUJN3\SQLEXPRESS.JobDescription-Source.vanhuy;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOSUQy20hoUa+IuvSIESOCQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADVB1cjoakUpRo3ThJYq1glDea+JeYbNzsRISnQ6HNFjgAAAAAOgAAAAAIAACAAAAD3bk3YmXaGOSCQMuPep+tdpMxPEn74mKLUzilkcYOc3xAAAACUXQntnYr7QvL1jAdNLVFSQAAAAFS0+f324IdHfdW77PuViwsR88UBbbWcv957vBoe0ENa6v8m2WXW01cYQHhVj/F3lajl4qiKb20We3SHFqXEnY8</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOSUQy20hoUa+IuvSIESOCQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADotapapPrnhPP4iChDfmb5Sd4bsHF4KNKaujroX+RMxwAAAAAOgAAAAAIAACAAAABryTIeNAOWcxBTKaB/zfLoZgdGmm4K/eo3iYuppLRGEhAAAABD1BT8n8jaelFtcSooxVerQAAAAHCWRTg+5J0z9v1FoN3dvzclSQJ8ep4k4MpnXDkWdYpQuOs5D+0NwofxB+GzAbccx6SAOieCBJvYXg0l8dSABlM</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\datawarehouse\Project\Data\fact_company_performance.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\datawarehouse\Project\Data\fact_company_performance.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -54,7 +54,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\datawarehouse\Project\Data\Formatted-Data.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\datawarehouse\Project\Data\Formatted-Data.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -66,7 +66,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\datawarehouse\Project\Data\fact_job_compensation.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\datawarehouse\Project\Data\fact_job_compensation.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -78,7 +78,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\datawarehouse\Project\Data\fact_job_posting.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\datawarehouse\Project\Data\fact_job_posting.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -3739,6 +3739,10 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="247,42"
+          Id="Package\Disable foreign key and truncate db"
+          TopLeft="53,136" />
+        <NodeLayout
           Size="193,42"
           Id="Package\Import Dimension to DB"
           TopLeft="386,136" />
@@ -3768,10 +3772,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="247,42"
-          Id="Package\Disable foreign key and truncate db"
-          TopLeft="53,136" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="300,157">
@@ -3801,67 +3801,11 @@
     design-time-name="Package\Import Dimension to DB">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="158,42"
-          Id="Package\Import Dimension to DB\Company Source"
-          TopLeft="126,43" />
-        <NodeLayout
-          Size="147,42"
-          Id="Package\Import Dimension to DB\Dim_Company"
-          TopLeft="461,42" />
-        <EdgeLayout
-          Id="Package\Import Dimension to DB.Paths[Excel Source Output]"
-          TopLeft="284,63.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="177,0"
-              Start="0,0"
-              End="169.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="169.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="131,42"
-          Id="Package\Import Dimension to DB\Job Source"
-          TopLeft="130,119" />
-        <NodeLayout
-          Size="120,42"
-          Id="Package\Import Dimension to DB\Dim_Job"
-          TopLeft="444,123" />
-        <EdgeLayout
-          Id="Package\Import Dimension to DB.Paths[Excel Source Output1]"
-          TopLeft="261,142">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="183,0"
-              Start="0,0"
-              End="175.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="175.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="154,42"
+          Id="Package\Import Dimension to DB\Location Source"
+          TopLeft="656,125" />
         <NodeLayout
           Size="161,42"
           Id="Package\Import Dimension to DB\Job Portal Source"
@@ -3870,66 +3814,50 @@
           Size="153,42"
           Id="Package\Import Dimension to DB\Dim_Job_Portal"
           TopLeft="442,217" />
-        <EdgeLayout
-          Id="Package\Import Dimension to DB.Paths[Excel Source Output2]"
-          TopLeft="289,236.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="153,0"
-              Start="0,0"
-              End="145.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="145.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Import Dimension to DB\Location Source"
-          TopLeft="656,125" />
-        <NodeLayout
-          Size="143,42"
-          Id="Package\Import Dimension to DB\Dim_Location"
-          TopLeft="970,128" />
-        <EdgeLayout
-          Id="Package\Import Dimension to DB.Paths[Excel Source Output3]"
-          TopLeft="810,147.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="160,0"
-              Start="0,0"
-              End="152.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="152.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="172,42"
           Id="Package\Import Dimension to DB\Qualification Source"
           TopLeft="651,208" />
         <NodeLayout
+          Size="124,42"
+          Id="Package\Import Dimension to DB\Dim_Role"
+          TopLeft="975,367" />
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Import Dimension to DB\Job Source"
+          TopLeft="130,119" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Import Dimension to DB\Dim_Work_Type"
+          TopLeft="966,44" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Import Dimension to DB\Dim_Location"
+          TopLeft="970,128" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\Import Dimension to DB\Dim_Job"
+          TopLeft="444,123" />
+        <NodeLayout
+          Size="135,42"
+          Id="Package\Import Dimension to DB\Role Source"
+          TopLeft="661,364" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Import Dimension to DB\Dim_Company"
+          TopLeft="461,42" />
+        <NodeLayout
           Size="162,42"
           Id="Package\Import Dimension to DB\Dim_Qualification"
           TopLeft="965,211" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Import Dimension to DB\Company Source"
+          TopLeft="126,43" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Import Dimension to DB\Work Type Source"
+          TopLeft="652,41" />
         <EdgeLayout
           Id="Package\Import Dimension to DB.Paths[Excel Source Output4]"
           TopLeft="823,230.5">
@@ -3949,47 +3877,107 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="135,42"
-          Id="Package\Import Dimension to DB\Role Source"
-          TopLeft="661,364" />
-        <NodeLayout
-          Size="124,42"
-          Id="Package\Import Dimension to DB\Dim_Role"
-          TopLeft="975,367" />
         <EdgeLayout
-          Id="Package\Import Dimension to DB.Paths[Excel Source Output5]"
-          TopLeft="796,386.5">
+          Id="Package\Import Dimension to DB.Paths[Excel Source Output3]"
+          TopLeft="810,147.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="179,0"
+              EndConnector="160,0"
               Start="0,0"
-              End="171.5,0">
+              End="152.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="171.5,0" />
+                    End="152.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="165,42"
-          Id="Package\Import Dimension to DB\Work Type Source"
-          TopLeft="652,41" />
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Import Dimension to DB\Dim_Work_Type"
-          TopLeft="966,44" />
+        <EdgeLayout
+          Id="Package\Import Dimension to DB.Paths[Excel Source Output2]"
+          TopLeft="289,236.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="153,0"
+              Start="0,0"
+              End="145.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="145.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Dimension to DB.Paths[Excel Source Output1]"
+          TopLeft="261,142">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="183,0"
+              Start="0,0"
+              End="175.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="175.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Dimension to DB.Paths[Excel Source Output]"
+          TopLeft="284,63.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="177,0"
+              Start="0,0"
+              End="169.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="169.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Import Dimension to DB.Paths[Excel Source Output6]"
           TopLeft="817,63.5">
@@ -4009,151 +3997,40 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Import Fact to DB">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="168,42"
-          Id="Package\Import Fact to DB\Job Posting Source"
-          TopLeft="144,111" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\Import Fact to DB\Fact Job Posting"
-          TopLeft="495,114" />
         <EdgeLayout
-          Id="Package\Import Fact to DB.Paths[Excel Source Output]"
-          TopLeft="312,133.5">
+          Id="Package\Import Dimension to DB.Paths[Excel Source Output5]"
+          TopLeft="796,386.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="183,0"
+              EndConnector="179,0"
               Start="0,0"
-              End="175.5,0">
+              End="171.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="175.5,0" />
+                    End="171.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="201,42"
-          Id="Package\Import Fact to DB\Job Compensation Source"
-          TopLeft="126,221" />
-        <NodeLayout
-          Size="188,42"
-          Id="Package\Import Fact to DB\Fact Job Compensation"
-          TopLeft="490,219" />
-        <EdgeLayout
-          Id="Package\Import Fact to DB.Paths[Excel Source Output1]"
-          TopLeft="327,241">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="163,0"
-              Start="0,0"
-              End="155.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="155.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="221,42"
-          Id="Package\Import Fact to DB\Company Performance Source"
-          TopLeft="135,313" />
-        <NodeLayout
-          Size="209,42"
-          Id="Package\Import Fact to DB\Fact Company Performance"
-          TopLeft="483,307" />
-        <EdgeLayout
-          Id="Package\Import Fact to DB.Paths[Excel Source Output2]"
-          TopLeft="356,331">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="127,0"
-              Start="0,0"
-              End="119.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="119.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Import Dimension to DB\Company Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import Dimension to DB\Dim_Company">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import Dimension to DB\Job Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import Dimension to DB\Dim_Job">
+    design-time-name="Package\Import Dimension to DB\Location Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4192,59 +4069,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Import Dimension to DB\Location Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import Dimension to DB\Dim_Location">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Import Dimension to DB\Qualification Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import Dimension to DB\Dim_Qualification">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import Dimension to DB\Role Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4270,7 +4095,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Import Dimension to DB\Work Type Source">
+    design-time-name="Package\Import Dimension to DB\Job Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4284,6 +4109,221 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Import Dimension to DB\Dim_Work_Type">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Dimension to DB\Dim_Location">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Dimension to DB\Dim_Job">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Dimension to DB\Role Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Dimension to DB\Dim_Company">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Dimension to DB\Dim_Qualification">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Dimension to DB\Company Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Dimension to DB\Work Type Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Import Fact to DB">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="201,42"
+          Id="Package\Import Fact to DB\Job Compensation Source"
+          TopLeft="126,221" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Import Fact to DB\Fact Company Performance"
+          TopLeft="483,307" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Import Fact to DB\Job Posting Source"
+          TopLeft="144,111" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Import Fact to DB\Fact Job Posting"
+          TopLeft="495,114" />
+        <NodeLayout
+          Size="221,42"
+          Id="Package\Import Fact to DB\Company Performance Source"
+          TopLeft="135,313" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Import Fact to DB\Fact Job Compensation"
+          TopLeft="490,219" />
+        <EdgeLayout
+          Id="Package\Import Fact to DB.Paths[Excel Source Output]"
+          TopLeft="312,133.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="183,0"
+              Start="0,0"
+              End="175.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="175.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Fact to DB.Paths[Excel Source Output2]"
+          TopLeft="356,331">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="127,0"
+              Start="0,0"
+              End="119.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="119.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Fact to DB.Paths[Excel Source Output1]"
+          TopLeft="327,241">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="163,0"
+              Start="0,0"
+              End="155.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="155.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Fact to DB\Job Compensation Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Fact to DB\Fact Company Performance">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4322,32 +4362,6 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Import Fact to DB\Job Compensation Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Import Fact to DB\Fact Job Compensation">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Import Fact to DB\Company Performance Source">
     <Properties>
       <Property>
@@ -4361,7 +4375,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Import Fact to DB\Fact Company Performance">
+    design-time-name="Package\Import Fact to DB\Fact Job Compensation">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

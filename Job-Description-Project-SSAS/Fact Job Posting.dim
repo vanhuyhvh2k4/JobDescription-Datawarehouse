@@ -1,0 +1,269 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8106ff1f-cdee-4ec8-bc92-9688cc2c526e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Job Posting</ID>
+  <Name>Fact Job Posting</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3354" scrolltop="-3506" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10266" y="12012" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Fact_Job_Posting" left="46" top="1561" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3519" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000bf0d000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Fact_Job_Posting" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-3354</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3506</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>46</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>1561</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="9f935a65-27f0-443e-bba1-c89f211707b2">
+    <DataSourceViewID>Job_Posting_View</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="d642d84b-b597-4734-90c2-132219dc41ed">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="d6a90ae4-1b60-41b5-a3b5-82bba3a06500">
+      <ID>Unique ID</ID>
+      <Name>Unique ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="136a6371-094b-4a91-9b47-c2db88454dfb">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6587643c-082d-42cb-b117-d9c8bf87ec88">
+            <TableID>dbo_Fact_Job_Posting</TableID>
+            <ColumnID>UniqueID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="9fafbf52-cedf-4847-9d5e-fc71bb0628ad">
+          <AttributeID>Qualification ID</AttributeID>
+          <Name>Qualification ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7b0dafce-36b2-4027-907a-7590bba9ecb3">
+          <AttributeID>Role ID</AttributeID>
+          <Name>Role ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e6e045cf-1b2a-46b9-9b21-7c800475daf0">
+          <AttributeID>Job Title ID</AttributeID>
+          <Name>Job Title ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5c22a794-db80-4646-8463-fba7a59ec523">
+          <AttributeID>Location ID</AttributeID>
+          <Name>Location ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="67e6b136-339a-4e51-b888-137e143ee565">
+          <AttributeID>Work Type ID</AttributeID>
+          <Name>Work Type ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="58a7dca6-554c-4b40-a583-f99551e628f6">
+          <AttributeID>Company ID</AttributeID>
+          <Name>Company ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="289dcafc-4c48-4f1d-b597-06ecadb7df95">
+          <AttributeID>Job Portal ID</AttributeID>
+          <Name>Job Portal ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5a71c9fa-a1b2-40bc-bc7a-fb52064f2288">
+          <AttributeID>Job Posting Date</AttributeID>
+          <Name>Job Posting Date</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ffeaf08b-9039-40c7-9ca1-8c38b5107af4">
+      <ID>Qualification ID</ID>
+      <Name>Qualification ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f52c5a2c-e195-4006-b9f9-ac27662db0e5">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="96def6e3-6a2a-4d67-a87f-3c5e5a0235eb">
+            <TableID>dbo_Fact_Job_Posting</TableID>
+            <ColumnID>Qualification_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="804988f5-5d50-47bd-b310-64a1d76d4415">
+      <ID>Role ID</ID>
+      <Name>Role ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="300203ba-a2b5-4677-ab6f-9330144462dd">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="64b4cda2-45fb-43a9-8b9e-360a9cad3172">
+            <TableID>dbo_Fact_Job_Posting</TableID>
+            <ColumnID>Role_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d65449a9-aa24-4cf5-b358-c92ec5cad2ea">
+      <ID>Job Title ID</ID>
+      <Name>Job Title ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="50d36396-bc10-42e5-87f2-ac4a932a6625">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bb4f4c86-c22b-48e9-a951-06448fbc2478">
+            <TableID>dbo_Fact_Job_Posting</TableID>
+            <ColumnID>JobTitle_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bf4d115b-9de9-4245-9e5e-d479d083ec8c">
+      <ID>Location ID</ID>
+      <Name>Location ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="aedbd98e-e856-4712-b624-4d51f598f080">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6f958ae7-fa6e-4f3a-bd1e-c0fc6041974f">
+            <TableID>dbo_Fact_Job_Posting</TableID>
+            <ColumnID>Location_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="97ddf331-e2c3-4f1c-a944-5a4bb80fdaf4">
+      <ID>Work Type ID</ID>
+      <Name>Work Type ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="77d68550-f959-4aef-a3a0-15901f08834e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6b9fa1fd-3b0b-4cdc-adc8-629874ef79f8">
+            <TableID>dbo_Fact_Job_Posting</TableID>
+            <ColumnID>WorkType_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1df9e6ec-9a2d-40f5-94f4-7cf0bce37b8e">
+      <ID>Company ID</ID>
+      <Name>Company ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3a546ec9-de76-4183-b216-a073686dbd8f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a4e9eefd-c434-4a70-857d-4e90c7d3b25d">
+            <TableID>dbo_Fact_Job_Posting</TableID>
+            <ColumnID>Company_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bb903e64-6ec2-4096-8044-2819bb89e054">
+      <ID>Job Portal ID</ID>
+      <Name>Job Portal ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4d82eaaa-cae3-408d-a074-d4c2a3d1a258">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b6cb9ca9-03a1-408c-ba4c-3fe3c1e4a1b1">
+            <TableID>dbo_Fact_Job_Posting</TableID>
+            <ColumnID>JobPortal_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8685961d-6896-4e2a-baec-ff4277334b99">
+      <ID>Job Posting Date</ID>
+      <Name>Job Posting Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3153ec39-a009-4391-8f23-0c3633bae9b6">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cb627e2d-8ddf-424e-a3cc-4f6870fb2187">
+            <TableID>dbo_Fact_Job_Posting</TableID>
+            <ColumnID>Job_Posting_Date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
